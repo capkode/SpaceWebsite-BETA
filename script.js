@@ -1,35 +1,34 @@
-// Function to toggle the visibility of the mission info
-function toggleInfo(element) {
-    const info = element.nextElementSibling;  // Get the next sibling which is the .mission-info div
-    console.log("Clicked:", element);
-    console.log("Targeted Info:", info);
+/* i fucking hate java script lmfao */
 
-    const allInfos = document.querySelectorAll('.mission-info');
-    // Close any currently open info boxes
-    allInfos.forEach(function(item) {
-        if (item !== info) {
-            item.classList.remove('open');
-        }
-    });
-
-    // Toggle the current mission info
-    info.classList.toggle('open');
-}
-document.addEventListener('DOMContentLoaded', function() {
-    window.toggleInfo = function(element) {
-        const info = element.nextElementSibling;  // Get the next sibling which is the .mission-info div
-        console.log("Clicked:", element);
-        console.log("Targeted Info:", info);
-
-        const allInfos = document.querySelectorAll('.mission-info');
-        // Close any currently open info boxes
-        allInfos.forEach(function(item) {
-            if (item !== info) {
-                item.classList.remove('open');
-            }
+document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".timeline-item");
+  
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          } else {
+            entry.target.classList.remove("animate");
+          }
         });
+      },
+      { threshold: 0.5 }
+    );
+  
+    items.forEach((item) => observer.observe(item));
+  });
 
-        // Toggle the current mission info
-        info.classList.toggle('open');
-    };
-});
+  
+  window.addEventListener("scroll", () => {
+    let scrolled = window.scrollY;
+    const items = document.querySelectorAll(".timeline-item");
+    items.forEach(item => {
+      item.style.transform = `translateY(${scrolled * 0.1}px)`;
+    });
+  });
+
+  
+
+
+  
