@@ -10,9 +10,12 @@
     <link rel="icon" type="image/x-icon" href="famicon.png">
      
 </head>
-<body>
+    <audio id="background-audio" loop autoplay>
+        <source src="space-ambient.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
 
-    <!-- Video Background Section -->
+
     <section class="video-background">
         <video autoplay muted loop id="video-background">
             <source src="Homepage background video.mp4" type="video/mp4">
@@ -21,55 +24,55 @@
         <div class="overlay">
             <h1><b>Space mission's Timeline</b></h1>
             <a href="#timeline" class="btn">Start The Journey</a>
-            
         </div>
     </section>
 
-<!-- New Vertical Timeline Section -->
-<section id="timeline" class="timeline-section">
-    <div class="timeline-container">
-        <h1>Space Mission's Timeline</h1>
+    <!-- New Vertical Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="timeline-container">
+            <h1>Space Mission's Timeline</h1>
+            <h3>Click on any mission to learn more about it!</h3>
 
-        <!-- Timeline Entries on alternating sides -->
+            <!-- Timeline Entries on alternating sides -->
+            <div class="timeline-entry left">
+                <div class="timeline-content">
+                    <h2>Sputnik 1 (1957)</h2>
+                    <div class="mission-info">
+                        <p>Launched by the Soviet Union, it was the first artificial satellite to orbit Earth. This marked the beginning of the Space Age and sparked the Space Race.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-entry right">
+                <div class="timeline-content">
+                    <h2>Explorer 1 (1958)</h2>
+                    <div class="mission-info">
+                        <p>The first American satellite, launched by NASA. It collected data on cosmic rays and radiation belts around Earth.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional timeline entries -->
+            <div class="timeline-entry left">
+                <div class="timeline-content">
+                    <h2>Yuri Gagarin's Vostok 1 (1961)</h2>
+                    <div class="mission-info">
+                        <p>The first human to fly into space, Yuri Gagarin, made a single orbit around Earth aboard the Vostok 1 spacecraft. This achievement marked a major milestone in human space exploration.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-entry right">
+                <div class="timeline-content">
+                    <h2>Alan Shepard's Freedom 7 (1961)</h2>
+                    <div class="mission-info">
+                        <p>The first American to fly into space, Alan Shepard, made a suborbital flight aboard the Freedom 7 spacecraft. This flight lasted only 15 minutes but paved the way for future American space missions.</p>
+                    </div>
+                </div>
+            </div>
+
         <div class="timeline-entry left">
-            <div class="timeline-content" onclick="toggleinfo(this)">
-                <h2>Sputnik 1 (1957)</h2>
-                <div class="mission-info">
-                    <p>launched by the Soviet Union, it was the first artificial satellite to orbit Earth. This marked the beginning of the Space Age and sparked the Space Race.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="timeline-entry right">
-            <div class="timeline-content" onclick="toggleinfo(this)">
-                <h2>Explorer 1 (1958)</h2>
-                <div class="mission-info">
-                    <p>The first American satellite, launched by NASA. It collected data on cosmic rays and radiation belts around Earth.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- More Mission Entries -->
-        <div class="timeline-entry left">
-            <div class="timeline-content" onclick="toggleinfo(this)">
-                <h2>Yuri Gagarin's Vostok 1 (1961)</h2>
-                <div class="mission-info">
-                    <p>The first human to fly into space, Yuri Gagarin, made a single orbit around Earth aboard the Vostok 1 spacecraft. This achievement marked a major milestone in human space exploration.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="timeline-entry right">
-            <div class="timeline-content" onclick="toggleinfo(this)">
-                <h2>Alan Shepard's Freedom 7 (1961)</h2>
-                <div class="mission-info">
-                    <p> The first American to fly into space, Alan Shepard, made a suborbital flight aboard the Freedom 7 spacecraft. This flight lasted only 15 minutes but paved the way for future American space missions.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="timeline-entry left">
-            <div class="timeline-content" onclick="toggleinfo(this)">
+            <div class="timeline-content">
                 <h2> John Glenn's Friendship 7 (1961)</h2>
                 <div class="mission-info">
                     <p> The first American to orbit Earth, John Glenn, completed three orbits aboard the Friendship 7 spacecraft. This mission demonstrated the capabilities of American spacecraft and astronauts.
@@ -80,7 +83,7 @@
         </div>
 
         <div class="timeline-entry right">
-            <div class="timeline-content" onclick="toggleinfo(this)">
+            <div class="timeline-content">
                 <h2>Mariner 2 (1962)</h2>
                 <div class="mission-info">
                     <p>: The first spacecraft to successfully fly by Venus, Mariner 2 collected valuable data about the planet's atmosphere, temperature, and surface.
@@ -91,8 +94,8 @@
         </div>
 
         <div class="timeline-entry left">
-            <div class="timeline-content" onclick="toggleinfo(this)">
-                <h2> Ranger 7 (1962)                </h2>
+            <div class="timeline-content">
+                <h2> Ranger 7 (1962)</h2>
                 <div class="mission-info">
                     <p> The first spacecraft to transmit close-up images of the Moon's surface before crashing. This mission provided valuable information for planning future lunar landings.
 
@@ -102,7 +105,7 @@
         </div>
 
         <div class="timeline-entry right">
-            <div class="timeline-content" onclick="toggleinfo(this)">
+            <div class="timeline-content">
                 <h2> Luna 9 (1966) (1964)</h2>
                 <div class="mission-info">
                     <p> The first spacecraft to make a soft landing on the Moon, Luna 9 sent back panoramic images of the lunar surface.
@@ -112,80 +115,132 @@
         </div>
 
         <div class="timeline-entry left">
-            <div class="timeline-content" onclick="toggleInfo(this)">
-                <h2>Mission Name - 2015</h2>
+            <div class="timeline-content">
+                <h2>Mariner 4 (1965)</h2>
                 <div class="mission-info">
-                    <p>The 2015 mission involved crewed spaceflight and the study of the effects of long-term space travel on humans.</p>
+                    <p>The first spacecraft to fly by Mars, Mariner 4 sent back images of the planet's surface, revealing a barren and cratered landscape.</p>
                 </div>
             </div>
         </div>
 
         <div class="timeline-entry right">
-            <div class="timeline-content" onclick="toggleinfo(this)">
-                <h2>Mission Name - 2014</h2>
+            <div class="timeline-content">
+                <h2> Venera 3 (1966)</h2>
                 <div class="mission-info">
-                    <p>This mission explored a new type of propulsion system for faster space travel.</p>
+                    <p> The first spacecraft to reach the surface of Venus, Venera 3 crashed, but it provided valuable data about the planet's harsh environment.</p>
                 </div>
             </div>
         </div>
 
         <div class="timeline-entry left">
-            <div class="timeline-content" onclick="toggleInfo(this)">
-                <h2>Mission Name - 2013</h2>
+            <div class="timeline-content">
+                <h2> Apollo 11 (1969)</h2>
                 <div class="mission-info">
-                    <p>The 2013 mission helped study the atmosphere of Mars and its potential for sustaining life.</p>
+                    <p>Perhaps the greatest and the most important space mission ever. also the inspiration of this project,The first manned mission to land on the Moon, Apollo 11 saw Neil Armstrong and Buzz Aldrin walk on the Moon's surface and conduct experiments. This historic achievement marked a major turning point in human space exploration.</p>
                 </div>
             </div>
         </div>
 
         <div class="timeline-entry right">
-            <div class="timeline-content" onclick="toggleinfo(this)">
-                <h2>Mission Name - 2012</h2>
+            <div class="timeline-content">
+                <h2>Mariner 9 (1971)</h2>
                 <div class="mission-info">
-                    <p>Studied asteroids to understand the building blocks of the solar system.</p>
+                    <p>The first spacecraft to orbit Mars, Mariner 9 sent back detailed images of the planet's surface, revealing volcanoes, canyons, and other geological features.</p>
                 </div>
             </div>
         </div>
 
         <div class="timeline-entry left">
-            <div class="timeline-content" onclick="toggleinfo(this)">
-                <h2>Mission Name - 2011</h2>
+            <div class="timeline-content">
+                <h2> Pioneer 10 (1972)</h2>
                 <div class="mission-info">
-                    <p>Explored new moons in our solar system, looking for signs of past water activity.</p>
+                    <p>The first spacecraft to fly past Jupiter, Pioneer 10 collected valuable data about the planet's atmosphere, magnetosphere, and moons. It also became the first spacecraft to leave the solar system.                    </p>
                 </div>
             </div>
         </div>
 
         <div class="timeline-entry right">
-            <div class="timeline-content" onclick="toggleinfo(this)">
-                <h2>Mission Name - 2010</h2>
+            <div class="timeline-content">
+                <h2>Voyager 1 and 2 (1977)</h2>
                 <div class="mission-info">
-                    <p>Sent probes to study the sun's outer atmosphere and the effect on Earth's climate.</p>
+                    <p>These twin spacecraft embarked on a grand tour of the outer planets, exploring Jupiter, Saturn, Uranus, and Neptune. They sent back stunning images and data about these planets and their moons, revolutionizing our understanding of the solar system.</p>
                 </div>
             </div>
         </div>
 
         <div class="timeline-entry left">
-            <div class="timeline-content" onclick="toggleinfo(this)">
-                <h2>Mission Name - 2009</h2>
+            <div class="timeline-content">
+                <h2>Hubble Space Telescope (1990)</h2>
                 <div class="mission-info">
-                    <p>Focused on space station technology and improving long-duration human spaceflight capabilities.</p>
+                    <p>Launched by the Space Shuttle Discovery, the Hubble Space Telescope is a powerful astronomical observatory that has provided stunning images of the cosmos. It has allowed us to see farther into space than ever before and has made significant contributions to our understanding of the universe.</p>
                 </div>
             </div>
         </div>
 
         <div class="timeline-entry right">
-            <div class="timeline-content" onclick="toggleinfo(this)">
-                <h2>Mission Name - 2008</h2>
+            <div class="timeline-content">
+                <h2>Curiosity rover (2012)</h2>
                 <div class="mission-info">
-                    <p>Examined the composition of comets to understand the origins of our solar system.</p>
+                    <p>The most advanced rover ever sent to Mars, Curiosity is equipped with a suite of scientific instruments to explore the planet's surface and search for signs of past life. It has made numerous discoveries about Mars's environment and geology, including evidence of ancient lakes and streams.                    </p>
                 </div>
             </div>
         </div>
+
+        <div class="timeline-entry left">
+            <div class="timeline-content">
+                <h2> James Webb Space Telescope (2021)</h2>
+                <div class="mission-info">
+                    <p> The most powerful space telescope ever built, the James Webb Space Telescope is designed to observe distant galaxies, stars, and planets in unprecedented detail. It is expected to revolutionize our understanding of the universe's origins and evolution.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline-entry right">
+            <div class="timeline-content">
+                <h2>SpaceX Dragon 2 (2020)</h2>
+                <div class="mission-info">
+                    <p>The first commercial spacecraft to carry astronauts to the International Space Station, SpaceX Dragon 2 opened the door to a new era of commercial spaceflight.                    </p>
+                </div>
+            </div>
+        </div>
+
 
         <!-- Continue adding more mission entries... -->
     </div>
 </section>
+
+    <!--New horizontal Upcoming timeline section -->
+    <h2 class="horizontal-header">Upcoming Mission's!</h2>
+    
+    <div class="upcoming-timeline">
+        <div class="mission" data-mission="Mission 1">
+          <h3 class="mission-name">Artemis I</h3>
+          <p class="launch-date">2024</p>
+          <p>his uncrewed mission will test the Orion spacecraft and Space Launch System (SLS) rocket, paving the way for future human missions to the Moon.</p>
+        </div>
+        <div class="mission" data-mission="Mission 2">
+          <h3 class="mission-name">Artemis II</h3>
+          <p class="launch-date">2025</p>
+          <p>This crewed mission will send astronauts around the Moon, marking a major milestone in NASA's Artemis program.          </p>
+        </div>
+        <div class="mission" data-mission="Mission 3">
+          <h3 class="mission-name">Dragonfly</h3>
+          <p class="launch-date">2026</p>
+          <p>This drone will fly to Titan, Saturn's largest moon, and explore its methane lakes and dunes, searching for signs of life.</p>
+        </div>
+        <div class="mission" data-mission="Mission 4">
+          <h3 class="mission-name">Psyche </h3>
+          <p class="launch-date">2026</p>
+          <p>This mission will visit the asteroid Psyche, a metal-rich object that may be the core of a former planet.</p>
+        </div>
+        <div class="mission" data-mission="Mission 5">
+          <h3 class="mission-name">Mars</h3>
+          <p class="launch-date">2028</p>
+          <p>This rover mission will explore Mars's Jezero Crater, a former lake that may have once harbored microbial life.</p>
+        </div>
+      </div>
+
+      
 
 
     <!-- Contact Section (Smooth Scroll Target) -->
@@ -218,9 +273,10 @@
           </svg>
 
           
-<h3>Made By Kapish Laroiya and Harjas Singh</h3>
+
 
     </section>
+
 
     <script src="scripts.js"></script>
 </body>
