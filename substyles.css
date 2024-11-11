@@ -1,0 +1,66 @@
+ /* Reset and Universal Styles */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+   ; /* Fallback background */
+}
+
+/* Container for the Content */
+.content {
+    position: relative;
+    color: white;
+    padding: 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+    width: 60%;
+}
+
+/* Translucent Text Styling */
+.text {
+    font-size: 3rem;
+    
+    padding: 20px;
+    border-radius: 8px;
+   
+    animation: fadeInText 2s ease-out;
+}
+.subtext{
+    font-size: 1.5rem;
+}
+
+/* Text Fade-In Animation */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn{
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 2rem;
+    /*border: solid 2px;*/
+    color: white; /* Text color */
+    text-shadow: 0 0 10px rgba(8, 173, 223, 0.8), /* Outer glow */
+                 0 0 20px rgba(8, 173, 223, 0.8), /* Wider glow */
+                 0 0 30px rgba(8, 173, 223, 0.8); /* Faint, larger glow */
+  }
+
+    
